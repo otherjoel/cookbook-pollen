@@ -1,4 +1,4 @@
-Copyright 2020 Joel Dueck
+Copyright 2020 by Joel Dueck
 
 # Blue Oak Model License
 

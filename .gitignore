@@ -4,6 +4,7 @@
 *.pm~
 *.swp
 *.html
+*.css
 *.ltx
 *.pdf
 *.out
