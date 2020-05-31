@@ -48,17 +48,37 @@ h1.site-title {
     font-family: 'BDGeminis';
     font-weight: normal;
     margin-bottom: ◊x-lineheight[2.5];
+    margin-left: -8px;
+}
+
+h1.site-title a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 8px 0 8px;
+    transition-property: background, color;
+    transition-duration: 0.1s;
+}
+
+h1.site-title a:hover {
+    color: darkgoldenrod;
+    background: black;
+    border-radius: 4px;
 }
 
 pre.code {
     font-family: ◊mono;
     font-size: 0.8rem;
     color: rebeccapurple;
-    line-height: 1.2rem;
+    line-height: 1.3em;
     border-top: solid 1px lightgray;
     border-bottom: solid 1px lightgray;
     padding: 8px 0 8px 8px;
     border-radius: 8px;
+}
+
+pre.code mark {
+    color: rebeccapurple;
+    background: #fff0cb;
 }
 
 b.repl {
@@ -74,6 +94,7 @@ code {
     font-family: ◊mono;
     color: darkgoldenrod;
     font-style: italic;
+    letter-spacing: -1px;
 }
 
 samp {

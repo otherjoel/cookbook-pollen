@@ -7,7 +7,7 @@
   </head>
   <body>
 
-  <h1 class="site-title">The Pollen Cookbook</h1>
+  <h1 class="site-title"><a href="/index.html">The Pollen Cookbook</a></h1>
 
   ◊(->html doc)
   </body>
