@@ -5,6 +5,7 @@
 *.swp
 *.html
 *.css
+!fonts/fonts.css
 *.ltx
 *.pdf
 *.out

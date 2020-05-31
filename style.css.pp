@@ -1,128 +1,89 @@
 #lang pollen/pre
 
+◊(require racket/file)
+
 ◊; Since line height is used in so many places...
-◊(define LINEHEIGHT 1.4)
+◊(define LINEHEIGHT 1.5)
 
 ◊(define lineheight (string-append (number->string LINEHEIGHT) "rem"))
 
 ◊(define (x-lineheight multiple) 
     (string-append (real->decimal-string (* LINEHEIGHT multiple) 2) "rem"))
 
-@font-face {
-    font-family: 'BDGeminis';
-    src: url('fonts/bd_geminis.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+◊(file->string "fonts/fonts.css")
 
-@font-face {
-    font-family: 'PatrickSC';
-    src: url('fonts/patrickhandsc.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+◊(define sans-serif "'Plex Sans',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif,
+Apple Color Emoji,Segoe UI Emoji")
 
-@font-face {
-    font-family: 'CourierPrime';
-    src: url('fonts/courier_prime.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CourierPrime';
-    src: url('fonts/courier_prime_bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CourierPrime';
-    src: url('fonts/courier_prime_italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
+◊(define mono "'Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier,
+monospace")
 
 html {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,
-               Apple Color Emoji,Segoe UI Emoji;
-  font-size: 22px;
+  font-family: ◊sans-serif;
+  font-size: 20px;
   color: black;
 }
 
 body {
   line-height: ◊lineheight;
   margin: 2rem 0 0 8rem;
-  max-width: 30rem;
 }
 
-h1, h2, h3, h4 { 
+main {
+    max-width: 40rem;
+}
+
+h2, h3, h4 { 
     font-family: 'PatrickSC';
     font-weight: normal;
     line-height: 1em;
     margin-bottom: ◊x-lineheight[0.5];
+    color: #0074D9;
 }
+
+h2 { font-size: ◊x-lineheight[1.6]; }
+h3 { font-size: ◊x-lineheight[1.25]; }
 
 h1.site-title {
     font-family: 'BDGeminis';
     font-weight: normal;
-    margin-bottom: ◊x-lineheight[2];
+    margin-bottom: ◊x-lineheight[2.5];
 }
 
 pre.code {
-    font-family: 'CourierPrime';
-    background: #eee;
+    font-family: ◊mono;
+    font-size: 0.8rem;
+    color: rebeccapurple;
+    line-height: 1.2rem;
+    border-top: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    padding: 8px 0 8px 8px;
+    border-radius: 8px;
 }
 
-/* 
- * BR-style tooltips *****************************************/
-
-.tooltip {
-    display: inline;
-    position: relative;
-    background: white;
-    opacity: 0.5;
-    transition-property: opacity;
-    transition-duration: 0.20s;
+b.repl {
     color: black;
-    width: 1rem;
-    border: solid 1px grey;
-    box-sizing: content-box;
-    border-radius: 0.2em;
-    cursor: pointer;
+    font-weight: bold;
 }
 
-.tooltip-inner {
-    visibility: hidden;
-    display: block;
-    position: absolute;
-    right: -1px;
-    bottom: 1rem;
-    width: 12rem;
-    background: #999;
-    color: white;
-    padding: 1em;
-    font-size: 85%;
-    border-radius: 0.5em 0.5em 0 0.5em;
-    transform-origin: right bottom;
-    transform: scale(0.4);
-    opacity: 0;
-    transition-property: all;
-    transition-duration: .2s;
+span.repl-code {
+    color: navy;
 }
 
-.tooltip_visible .tooltip-inner {
-    visibility: visible;
-    transform-origin: right bottom;
-    transform: scale(1);
-    opacity: 1;
-    cursor: pointer;
+code {
+    font-family: ◊mono;
+    color: darkgoldenrod;
+    font-style: italic;
 }
 
-.tooltip:hover, .tooltip.tooltip_visible {
-    background: #999;
-    color: white;
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 0.20s;
+samp {
+    font-family: ◊sans-serif;
+    font-style: italic;
+    color: navy;
+    background: #f6f6f6;
+    border: dashed 1px darkgray;
+    padding: 3px;
+    border-radius: 3px;
 }
+
+◊(dynamic-require "tooltips.css.pp" 'doc)

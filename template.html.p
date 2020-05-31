@@ -9,7 +9,6 @@
 
   <h1 class="site-title">The Pollen Cookbook</h1>
 
-  <h2>First Example</h2>
-    ◊(->html doc)
+  ◊(->html doc)
   </body>
 </html>

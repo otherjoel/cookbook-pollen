@@ -20,13 +20,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-The [Courier Prime][3] and [Patrick Hand SC][4] fonts are provided under the terms of the [Open Font
-License](http://scripts.sil.org/OFL). [BD Geminis][5] font included by permission of Büro Destruct.
+[IBM Plex Mono, Plex Sans][3] and [Patrick Hand SC][4] fonts are included under the terms of the
+[Open Font License](http://scripts.sil.org/OFL). [BD Geminis][5] font included by permission of Büro
+Destruct.
 
-All other content is licensed under the terms in [LICENSE.md](LICENSE.md).
+All other content in this repo is licensed under the terms in [LICENSE.md](LICENSE.md).
 
 [1]: https://docs.racket-lang.org/pollen/
 [2]: https://buttondown.email/pollentime
-[3]: https://quoteunquoteapps.com/courierprime/
+[3]: https://www.ibm.com/plex/
 [4]: https://www.fontspace.com/patrick-hand-sc-font-f17484
 [5]: https://www.typedifferent.com/font-bd-geminis/
