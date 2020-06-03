@@ -92,7 +92,7 @@ span.repl-code {
 
 code {
     font-family: ◊mono;
-    color: darkgoldenrod;
+    color: #966b00;
     font-style: italic;
     letter-spacing: -1px;
 }
