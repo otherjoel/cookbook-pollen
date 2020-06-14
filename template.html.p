@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>◊(or (select 'h2 doc) "Pollen Cookbook")</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
