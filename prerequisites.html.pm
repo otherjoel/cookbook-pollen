@@ -14,7 +14,8 @@ package}.◊tooltip{This is a standalone package in Racket. It is separate from 
 so is its documentation), but because it is one of Pollen’s dependencies, it gets installed
 automatically when you install Pollen.} All Pollen documents are compiled into tagged X-expressions,
 so learning how to recognize, generate and manipulate valid tagged X-expressions is a critical
-skill. In particular, many of the error messages you get will ultimately trace back to an invalid
-tagged X-expression being generated somewhere within your document.
+skill. In particular, many of the error messages you get when you’re implementing something new will
+ultimately trace back to an invalid tagged X-expression being generated somewhere within your
+document.
 
 This book also assumes you understand HTML and CSS.
