@@ -113,7 +113,7 @@
   (define list-items
     (map (λ (p) `(li (a [[href ,(format "/~a" p)]] ,(maybe-title p))))
          (children sym "index.ptree")))
-  `(ul ,@list-items))
+  `(ul [[class "chapters"]] ,@list-items))
   
 ;;
 ;; Tool tips!  ~~~~~~~~~~~~~~~~~~~~~~~~~~

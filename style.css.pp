@@ -65,6 +65,26 @@ h1.site-title a:hover {
     border-radius: 4px;
 }
 
+ul.chapters {
+    list-style-type: none;
+}
+
+ul.chapters li {
+}
+
+ul.chapters a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition-property: background, color;
+    transition-duration: 0.1s;
+}
+
+ul.chapters a:hover {
+    background: #ddd;
+    border-radius: 4px;
+}
+
 a.xref::before {
     content: '☞';
     font-size: 1.5em;
