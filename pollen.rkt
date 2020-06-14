@@ -73,6 +73,9 @@
 (define (link url . elements)
   `(a [[href ,url]] ,@elements))
 
+(define (Pollen [str "Pollen"]) 
+  (link "https://pollenpub.com" str))
+
 (define (xref slug . elements)
   `(a [[class "xref"] [href ,(format "~a.html" slug)]] ,@elements))
 

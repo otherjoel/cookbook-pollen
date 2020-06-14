@@ -2,10 +2,8 @@
 
 ◊title{Pre-ramble}
 
-◊(define (Pollen [str "Pollen"]) ◊link["https://pollenpub.com"]{◊str} )
-
-◊Pollen[] is a language and programming environment for publishing books, or anything. It is ideal for
-those who want to design their own markup and to have maximum control over the finished results
+◊Pollen[] is a language and programming environment for publishing books, or anything. It is ideal
+for those who want to design their own markup and to have maximum control over the finished results
 produced by that markup.
 
 “Maximum control” means that Pollen gives you building blocks. Out of the box, you can write in
@@ -27,13 +25,4 @@ around in that code filled in a lot of gaps for me.
 
 This book, like ◊link["https://archive.org/details/Basic_Cookbook_1978_Tab_Books/mode/2up"]{its 1978
 namesake}, is a collection of examples and techniques. It will show you possible ways of putting the
-ingredients together to implement some of those “interesting” features in your own Pollen projects. 
-
-◊section{Pre-requirisites}
-
-This book should not be your introduction to Pollen and Racket. You probably will not get anything
-out of this book unless you first read the ◊Pollen{Pollen documentation} and work through the
-tutorials. 
-
-This book also assumes you understand HTML and CSS.
-
+ingredients together to implement some of those “interesting” features in your own Pollen projects.
