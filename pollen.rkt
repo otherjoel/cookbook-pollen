@@ -73,6 +73,9 @@
 (define (link url . elements)
   `(a [[href ,url]] ,@elements))
 
+(define (xref slug . elements)
+  `(a [[class "xref"] [href ,(format "~a.html" slug)]] ,@elements))
+
 (define (cite key)
   `(cite [[ref ,(format "~a" key)]]))
 

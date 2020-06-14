@@ -65,6 +65,52 @@ h1.site-title a:hover {
     border-radius: 4px;
 }
 
+a.xref::before {
+    content: '☞';
+    font-size: 1.5em;
+    position: relative;
+    line-height: 0;
+    top: 0.16em;
+    left: -0.1em; /* Give the manicule a little extra room */
+}
+
+a.xref {
+    text-decoration: none;
+    margin-left: 0.2em; /* Give the manicule a little extra room */
+    color: #0074d9;
+    font-weight: bold;
+}
+
+
+ol {
+    list-style: none;
+    counter-reset: ol-counter;
+}
+
+ol li {
+    counter-increment: ol-counter;
+    margin-bottom: ◊x-lineheight[1];
+    margin-left: 2em;
+    position: relative
+}
+
+ol li::before {
+    display: inline-block;
+    content: counter(ol-counter);
+    font-family: 'PatrickSC';
+    font-weight: bold;
+    color: white;
+    background: #666;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    left: -2.5em;
+    line-height: 1.5em;
+    border-radius: 0.1em;
+    text-align: center;
+    margin-right: 2em;
+}
+
 pre.code {
     font-family: ◊mono;
     font-size: 0.8rem;
@@ -95,6 +141,11 @@ code {
     color: #966b00;
     font-style: italic;
     letter-spacing: -1px;
+}
+
+/* Match X-height when using code in headings */
+h2 code, h3 code, h4 code {
+    font-size: 0.85em;
 }
 
 samp {
