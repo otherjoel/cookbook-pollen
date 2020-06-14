@@ -81,6 +81,17 @@ a.xref {
     font-weight: bold;
 }
 
+a.file {
+    color: #444;
+    font-family: ◊mono;
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+.icon {
+    fill: currentColor;
+    display: inline-block;
+}
 
 ol {
     list-style: none;
