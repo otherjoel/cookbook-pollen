@@ -4,7 +4,7 @@
 
 ◊section-listing['frontmatter]
 
-◊section{General}
+◊section{General Pollen-Fu}
 
 ◊section-listing['general]
 
