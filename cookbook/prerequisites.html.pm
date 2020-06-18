@@ -1,6 +1,6 @@
 #lang pollen
 
-◊title{Pre-requirisites}
+◊title{Things you should know before reading}
 
 This book should not be your introduction to Pollen and Racket. You probably will not get anything
 out of this book unless you first read the ◊Pollen{Pollen documentation} and work through the
