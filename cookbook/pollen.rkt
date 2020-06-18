@@ -1,10 +1,12 @@
 #lang racket/base
 
 (require racket/list
+         racket/match
          pollen/core
          pollen/decode
          pollen/tag
          pollen/pagetree
+         pollen/file
          txexpr
          pollen/template)
 
@@ -112,7 +114,10 @@
 ;;
 (define (section-listing sym)
   (define (maybe-title p)
-    (if (file-exists? (symbol->string p)) (car (select-from-doc 'h2 p)) `(i ,(symbol->string p))))
+    (match (get-source p)
+      [(? path? src) (car (select-from-doc 'h2 src))]
+      [_ `(i ,(symbol->string p))]))
+  
   (define list-items
     (map (λ (p) `(li (a [[href ,(format "/~a" p)]] ,(maybe-title p))))
          (children sym "index.ptree")))
