@@ -1,6 +1,6 @@
 # Pollen Cookbook
 
-This is a book of how-to recipes for publishing with [Pollen][1].
+This is a book of how-to recipes for publishing with [Pollen][1]. You can [read it online][5].
 
 It is a work in progress: I am writing it in tandem with “Pollen Time” sessions: live streaming
 events where I take questions and demonstrate techniques.
@@ -11,8 +11,8 @@ events.
 You’ll get the most use out of this book (and the online events) if you have already completed the
 excellent tutorials in [Pollen’s main documentation][1].
 
-The book is currently not yet live anywhere on the web. If you have Pollen installed you can clone
-this repo and run `raco pollen start -l` to see it in your web browser on your local machine. 
+If you have Pollen installed, you can clone this repo and run `raco pollen start -l` from within the
+`cookbook` folder to see it in your web browser on your local machine. 
 
 ## Contributing
 
@@ -31,3 +31,4 @@ All other content in this repo is licensed under the terms in [LICENSE.md](LICEN
 [3]: https://www.ibm.com/plex/
 [4]: https://www.fontspace.com/patrick-hand-sc-font-f17484
 [5]: https://www.typedifferent.com/font-bd-geminis/
+[6]: https://thelocalyarn.com/excursus/pollen-cookbook
