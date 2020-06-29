@@ -1,6 +1,6 @@
 # Pollen Cookbook
 
-This is a book of how-to recipes for publishing with [Pollen][1]. You can [read it online][5].
+This is a book of how-to recipes for publishing with [Pollen][1]. You can [read it online][6].
 
 It is a work in progress: I am writing it in tandem with “Pollen Time” sessions: live streaming
 events where I take questions and demonstrate techniques.
