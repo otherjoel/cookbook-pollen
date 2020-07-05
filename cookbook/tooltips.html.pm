@@ -1,6 +1,7 @@
 #lang pollen
 
-◊(define-meta files '(("tooltips.css.pp" . "CSS styles for tooltips")))
+◊(define-meta files (("tooltips.css.pp" "CSS styles for tooltips")
+                     ("tooltips.rkt" "Source for tag functions")))
 
 ◊title{Tooltips}
 
