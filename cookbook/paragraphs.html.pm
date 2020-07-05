@@ -2,7 +2,9 @@
 
 ◊title{Paragraphs}
 
-Paragraphs don’t get marked up for you automatically: you have to decide how you want this handled.
+In other markup languages like Markdown, double newlines are treated as paragraph separators by
+default. But in Pollen, paragraphs don’t get marked up for you automatically: you have to decide how
+you want this handled.
 
 The most common way: do it in your ◊code{root} function using a call to ◊code{decode} or
 ◊code{decode-elements} and passing it the ◊code{decode-paragraphs} function: ◊tooltip{The relevant
