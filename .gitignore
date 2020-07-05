@@ -17,3 +17,4 @@ compiled/
 .DS_Store
 makefile
 relativize
+publish/
