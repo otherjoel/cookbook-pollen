@@ -35,6 +35,7 @@ main {
 
 h2, h3, h4 { 
     font-family: 'PatrickSC';
+    font-feature-settings: "liga" 0; /* 'fi' ligatures inexplicably lowercase */
     font-weight: normal;
     line-height: 1em;
     margin-bottom: ◊x-lineheight[0.5];
@@ -189,4 +190,7 @@ samp {
     border-radius: 3px;
 }
 
+
 ◊(dynamic-require "tooltips.css.pp" 'doc)
+
+◊(dynamic-require "repolinks.css.pp" 'doc)
