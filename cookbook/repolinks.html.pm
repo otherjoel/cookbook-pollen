@@ -26,7 +26,7 @@ source for the chapter itself.
 
 A chapter can add files to this list by adding a ◊code{files} meta with ◊code{define-meta}.
 
-To generate the X-expression for the list of these files, ◊repolink{repolinks.rkt} defines a function,
+To generate the X-expression for the list of these files, ◊repofile{repolinks.rkt} defines a function,
 ◊code{file-link-list}, which grabs the list of files to use from the current metas.
 
 We don’t have to call this function from our chapters though. We’ll have it inserted into every file
