@@ -1,23 +1,32 @@
 #lang racket/base
 
-(require racket/list
-         racket/match
-         pollen/core
+(require pollen/core
          pollen/decode
-         pollen/tag
-         pollen/pagetree
          pollen/file
-         txexpr
-         pollen/template)
+         pollen/pagetree
+         pollen/tag
+         pollen/template
+         racket/list
+         racket/match
+         txexpr)
+
+;; Import functions related to specific chapters in the book
+(require "repolinks.rkt")
 
 (provide ->html (all-defined-out))
+
+;; Provide the functions related to specific chapters in the book:
+(provide (all-from-out "repolinks.rkt"))
+
+(define (chapter-pagetree)
+  (cons 'root (flatten (map rest (filter list? (get-pagetree "index.ptree"))))))
 
 (define (make-bibliography ctable)
   ; Get a list of the keys, ensure it is sorted alphabetically
   ; I had originally converted them to strings before sorting.
   ; But, turns out Racket has a function I can use with symbols directly 
   (define keys-srt (sort (hash-keys ctable) string<?))
-  
+
   (define list-items
     (for/list ([item (in-list keys-srt)])
       `(li ,@(hash-ref ctable item))))
@@ -47,12 +56,17 @@
                                 (list (format "No def for ~a" (attr-ref tx 'ref)))))]
       [else tx]))
 
-
-  ;; Produce a final X-expression for the doc
-  (decode boiled-tx 
-          #:txexpr-proc replace-cites
-          #:txexpr-elements-proc hardwrapped-grafs
-          #:exclude-tags '(pre)))
+  ;; Run doc through any special handlers defined by chapter-specific functionality Doing it this
+  ;; way is a little inefficient; we could combine a lot of these into a single call to `decode`.
+  ;; But it makes it easier for you to understand each piece of functionality separately from the
+  ;; others.
+  (let* ([doc `(main ,@elems)]
+         [doc (repolink-root-handler doc)])
+    ;; Produce a final X-expression for the doc
+    (decode doc
+            #:txexpr-proc replace-cites
+            #:txexpr-elements-proc hardwrapped-grafs
+            #:exclude-tags '(pre))))
 
 (define (hardwrapped-grafs xs)
   (define (newline-to-space xs)
@@ -90,25 +104,6 @@
 (define (insert-bibliography)
   `(bib))
 
-(define (repofile filename)
-  (define repo-url "https://github.com/otherjoel/cookbook-pollen")
-  `(a [[class "file"] 
-       [title ,(format "View ~a on the GitHub repo" filename)]
-       [href ,(format "~a/blob/master/~a" repo-url filename)]]
-      (svg [[aria-label "file"] 
-            [class "icon icon-file"]
-            [viewBox "0 0 16 16"]
-            [version "1.1"]
-            [width "16"]
-            [height "16"]
-            [role "img"]]
-           (path [[fill-rule "evenodd"]
-                  [d "M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 
-                     00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 
-                     .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 
-                     0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 
-                     0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"]]))
-      ,filename))
 ;;
 ;; Page tree stuff!! ~~~~~~~~~~~~~~~~~~~
 ;;
