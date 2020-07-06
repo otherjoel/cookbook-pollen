@@ -1,4 +1,5 @@
 #lang pollen
+◊define-meta[files (("index.ptree" "The pagetree: defines chapter order and structure"))]
 
 ◊(define-meta template "template-index.html.p")
 
