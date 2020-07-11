@@ -8,7 +8,7 @@
   <body>
 
   <h1 class="site-title"><a href="/index.html">The Pollen Cookbook</a></h1>
-
+  <aside class="ribbon-tl"><a href="https://github.com/otherjoel/cookbook-pollen">Work in progress!</a></aside>
   ◊(->html doc)
   </body>
 </html>

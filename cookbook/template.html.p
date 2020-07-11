@@ -7,6 +7,8 @@
   </head>
   <body>
 
+    <aside class="ribbon-tl"><a href="https://github.com/otherjoel/cookbook-pollen">Work in progress!</a></aside>
+
   <h1 class="site-title"><a href="/index.html">The Pollen Cookbook</a></h1>
   <nav>
     ◊when/splice[(previous here (chapter-pagetree))]{

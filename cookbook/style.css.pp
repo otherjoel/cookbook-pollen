@@ -29,6 +29,24 @@ body {
   margin: 2rem 0 0 8rem;
 }
 
+aside.ribbon-tl {
+  width: 300px;
+  padding: 6px;
+  position: fixed;
+  text-align: center;
+  color: #f0f0f0;
+  background-color: #e43;
+  top: 50px;
+  right: -80px;
+  transform: rotate(45deg);
+}
+
+aside.ribbon-tl a {
+    text-decoration: none;
+    color: #eee;
+    font-family: 'PatrickSC';
+}
+
 main {
     max-width: 40rem;
 }
