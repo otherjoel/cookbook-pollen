@@ -8,7 +8,8 @@
 
 ;; The tag functions used in Pollen sources
 
-;; Insert a citation
+;; Insert a citation: actually just leaves behind an empty marker in the doc for later processing
+;; by `citations-root-handler`
 (define (cite key)
   `(cite [[ref ,(format "~a" key)]]))
 
