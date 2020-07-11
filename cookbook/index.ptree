@@ -3,7 +3,7 @@
 index.html
 ◊frontmatter{
     intro.html
-    prerequisites.html
+    prereq.html
 }
 ◊general{
     htdpm.html
