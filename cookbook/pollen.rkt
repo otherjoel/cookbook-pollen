@@ -53,6 +53,9 @@
 (define (codeblock . elements)
   `(pre [[class "code"]] ,@elements))
 
+(define (tag . elements)
+  `(code (span [[class "pollen-mode"]] "◊") ,@elements))
+
 (define (>> . elements)
   `(@ (b [[class "repl"]] "> ") (span [[class "repl-code"]] ,@elements)))
 

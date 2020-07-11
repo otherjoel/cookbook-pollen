@@ -175,6 +175,10 @@ code {
     letter-spacing: -1px;
 }
 
+code .pollen-mode {
+    font-style: normal;
+}
+
 /* Match X-height when using code in headings */
 h2 code, h3 code, h4 code {
     font-size: 0.85em;
