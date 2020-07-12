@@ -125,6 +125,7 @@ a.file {
     font-family: ◊mono;
     font-style: italic;
     letter-spacing: -1px;
+    display: inline-block; /* Avoid line breaks between icon and filename */
 }
 
 .icon {
