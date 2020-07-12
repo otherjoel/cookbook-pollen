@@ -89,6 +89,7 @@ ul.chapters {
 }
 
 ul.chapters li {
+    margin-bottom: 0;
 }
 
 ul.chapters a {
