@@ -121,16 +121,22 @@ a.xref {
 }
 
 a.file {
-    color: #444;
+    color: #b60fb0;
     font-family: ◊mono;
     font-style: italic;
     letter-spacing: -1px;
     display: inline-block; /* Avoid line breaks between icon and filename */
+    text-decoration: none;
 }
 
 .icon {
     fill: currentColor;
     display: inline-block;
+}
+
+.related-file .icon {
+    vertical-align: text-bottom;
+    padding-bottom: 1px;
 }
 
 ol {
@@ -140,9 +146,12 @@ ol {
 
 ol li {
     counter-increment: ol-counter;
-    margin-bottom: ◊x-lineheight[1];
     margin-left: 2em;
     position: relative
+}
+
+ol li, ul li {
+    margin-bottom: ◊x-lineheight[1];
 }
 
 ol li::before {
