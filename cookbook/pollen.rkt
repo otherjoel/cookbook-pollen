@@ -26,7 +26,7 @@
   (cons 'root (flatten (map rest (filter list? (get-pagetree "index.ptree"))))))
 
 (define (root . elems)
-  ;; Run doc through any special handlers defined by chapter-specific functionality Doing it this
+  ;; Run doc through any special handlers defined by chapter-specific functionality. Doing it this
   ;; way is a little inefficient; we could combine a lot of these into a single call to `decode`.
   ;; But it makes it easier for you to understand each piece of functionality separately from the
   ;; others.
