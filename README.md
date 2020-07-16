@@ -21,8 +21,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 ## License
 
 [IBM Plex Mono, Plex Sans][3] and [Patrick Hand SC][4] fonts are included under the terms of the
-[Open Font License](http://scripts.sil.org/OFL). [BD Geminis][5] font included by permission of Büro
-Destruct.
+[Open Font License](http://scripts.sil.org/OFL). [BD Geminis][5] font included by permission of
+[Büro Destruct][7].
 
 All other content in this repo is licensed under the terms in [LICENSE.md](LICENSE.md).
 
@@ -32,3 +32,4 @@ All other content in this repo is licensed under the terms in [LICENSE.md](LICEN
 [4]: https://www.fontspace.com/patrick-hand-sc-font-f17484
 [5]: https://www.typedifferent.com/font-bd-geminis/
 [6]: https://thelocalyarn.com/excursus/pollen-cookbook
+[7]: https://burodestruct.net
