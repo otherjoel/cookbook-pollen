@@ -13,12 +13,14 @@
 ;; Import functions related to specific chapters in the book
 (require "repolinks.rkt"
          "tooltips.rkt"
-         "citations.rkt")
+         "citations.rkt"
+         "doclinks.rkt")
 
 (provide ->html (all-defined-out))
 
 ;; Provide the functions related to specific chapters in the book:
 (provide (all-from-out "repolinks.rkt"
+                       "doclinks.rkt"
                        "tooltips.rkt"
                        "citations.rkt"))
 

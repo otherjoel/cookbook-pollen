@@ -227,3 +227,5 @@ samp {
 ◊(dynamic-require "tooltips.css.pp" 'doc)
 
 ◊(dynamic-require "repolinks.css.pp" 'doc)
+
+◊(dynamic-require "doclinks.css.pp" 'doc)
