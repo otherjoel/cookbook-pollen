@@ -1,6 +1,6 @@
 #lang pollen
 
-◊(define-meta files (("docklinks.rkt" "Source code for tag functions described here")
+◊(define-meta files (("doclinks.rkt" "Source code for tag functions described here")
                      ("doclinks.css.pp" "CSS styles for Racket doc links")))
 
 ◊title{Automatic Racket documentation links}
