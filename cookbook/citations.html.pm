@@ -62,7 +62,7 @@ doc (usually ◊code{root})}
 
 Both of these approaches are valid and idiomatic. The first is simpler, and suited to a project
 where the same information is used across multiple Pollen sources. But sometimes it isn’t an option;
-sometimes you the information you need can only be found elsewhere in the same document. That’s when
+sometimes the information you need can only be found elsewhere in the same document. That’s when
 the second approach is needed.
 
 ◊section{Our implementation}
