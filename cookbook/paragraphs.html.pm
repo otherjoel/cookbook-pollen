@@ -76,13 +76,12 @@ must use the ◊code{#:force? #t} option:
 (define (hardwrapped-grafs xs)
   (define (newline-to-space xs)
     (decode-linebreaks xs " "))
-  (decode-paragraphs xs #:linebreak-proc newline-to-space))
+  (decode-paragraphs xs #:linebreak-proc newline-to-space ◊mark{#:force? #t}))
 
 (define (root . elements)
   `(main ,@(decode-elements elements 
                             #:txexpr-elements-proc hardwrapped-grafs
                             #:exclude-tags '(pre))))
-                            ◊mark{#:force? #t})))
 }
 
 
