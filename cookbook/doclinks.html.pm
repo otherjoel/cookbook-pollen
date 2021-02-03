@@ -36,12 +36,6 @@ succeeds (using ◊rkt{for/or}).}
 
 }
 
-◊strong{Note:} If the package containing the identifier your searching is installed in “user scope”
-(the default for most people),
-◊link["https://groups.google.com/g/racket-users/c/zIeAaJULzzI"]{you’ll get an error}. The only
-workaround right now is to uninstall the package and reinstall it in “installation scope” with
-◊code{raco pkg install --installation ◊i{pkg-name}}.
-
 ◊section{Quick aside: learning from the Racket documentation}
 
 Ironically, if you wanted to learn how to do ◊em{just this} directly from the Racket documentation,
