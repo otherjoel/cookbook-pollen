@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>◊(or (select 'h2 doc) "Pollen Cookbook")</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom feed" href="https://thelocalyarn.com/excursus/pollen-cookbook/feed.atom" />
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
