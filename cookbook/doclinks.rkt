@@ -10,7 +10,7 @@
          rkt)
 
 ;; These are the modules that will be checked in order to try and find documentation links.
-(define modules-to-search (make-parameter '(racket chess txexpr pollen scribble/xref)))
+(define modules-to-search (make-parameter '(racket txexpr pollen scribble/xref)))
 
 (define xrefs (load-collections-xref))
 
