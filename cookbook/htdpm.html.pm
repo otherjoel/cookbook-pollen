@@ -1,5 +1,7 @@
 #lang pollen
 
+◊(define-meta published "2020-06-14")
+
 ◊title{How to Design Pollen Markup}
 
 A layman’s attempt at applying the

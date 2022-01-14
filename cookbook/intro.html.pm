@@ -1,5 +1,7 @@
 #lang pollen
 
+◊(define-meta published "2020-06-14")
+
 ◊title{Pre-ramble}
 
 ◊Pollen[] is a language and programming environment for publishing books, or anything. It is ideal

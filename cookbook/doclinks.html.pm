@@ -1,6 +1,10 @@
 #lang pollen
 
+◊(define-meta published "2020-07-19")
+◊(define-meta updated "2021-02-21")
+
 ◊(define-meta files (("doclinks.rkt" "Source code for tag functions described here")
+
                      ("doclinks.css.pp" "CSS styles for Racket doc links")))
 
 ◊title{Automatic Racket documentation links}

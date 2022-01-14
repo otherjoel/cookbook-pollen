@@ -1,5 +1,7 @@
 #lang pollen
 
+◊(define-meta published "2020-07-06")
+
 ◊define-meta[files (("citations.rkt" "Source code for citation/bibliography tag functions"))]
 
 ◊title{Citations and Bibliographies}

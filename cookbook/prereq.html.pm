@@ -1,5 +1,7 @@
 #lang pollen
 
+◊(define-meta published "2020-07-11")
+
 ◊title{Things you should know before reading}
 
 This book should not be your introduction to Pollen and Racket. You probably will not get anything

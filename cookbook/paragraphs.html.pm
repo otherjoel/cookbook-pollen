@@ -1,5 +1,8 @@
 #lang pollen
 
+◊(define-meta published "2020-06-14")
+◊(define-meta updated "2020-08-02")
+
 ◊title{Paragraphs}
 
 In other markup languages like Markdown, double newlines are treated as paragraph separators by

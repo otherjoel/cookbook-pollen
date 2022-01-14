@@ -1,5 +1,7 @@
 #lang pollen
 
+◊(define-meta published "2020-07-05")
+
 ◊define-meta[files (("repolinks.rkt" "Tag functions for GitHub links")
                     ("repolinks.css.pp" "CSS styles for GitHub links"))]
 
