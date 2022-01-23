@@ -1,7 +1,7 @@
 #lang pollen
 
 ◊(define-meta published "2020-07-19")
-◊(define-meta updated "2021-02-21")
+◊(define-meta updated "2022-01-22 12:15:00")
 
 ◊(define-meta files (("doclinks.rkt" "Source code for tag functions described here")
 
@@ -55,3 +55,7 @@ function(s) in question. See what results you get, and then try using the output
 input for another. Looking at the outputs (in combination with a close reading of the documentation
 that does exist) will put you on a navigable path. The extra work will feel strangely worth it when
 you crack the problem open.
+
+◊section{Updates}
+
+◊i{21 Jan 2022:} Updated ◊repofile{doclinks.rkt} to point correctly to the public Racket docs.

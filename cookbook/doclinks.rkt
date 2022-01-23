@@ -1,6 +1,7 @@
 #lang racket/base
 
-(require pkg/path
+(require net/uri-codec
+         pkg/path
          racket/list
          racket/syntax
          scribble/xref
@@ -10,7 +11,7 @@
          rkt)
 
 ;; These are the modules that will be checked in order to try and find documentation links.
-(define modules-to-search (make-parameter '(racket txexpr pollen scribble/xref)))
+(define modules-to-search (make-parameter '(racket txexpr pollen/core pollen/template scribble/xref)))
 
 (define xrefs (load-collections-xref))
 
@@ -38,13 +39,13 @@
                (format "~a~a#~a"
                        "https://docs.racket-lang.org/"
                        ;; drop `doc/` from the front of the subpath:
-                       (path->string (apply build-path (drop (explode-path subpath) 1)))
-                       anchor))])
+                       (path->string (apply build-path (drop (explode-path subpath) 2)))
+                       (form-urlencoded-encode anchor)))])
            (define-values (path anchor)
              (xref-tag->path+anchor xrefs
                                     def-tag
                                     #:external-root-url "http://docs.racket-lang.org/"))
-           (format "~a#~a" path anchor))))
+           (format "~a#~a" path (form-urlencoded-encode anchor)))))
   (cond
     [href
      `(a [[href ,href]
